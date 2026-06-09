@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspire Athletics Club | Dashboard</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+ 
+<header>
+    <div class="logo-container">
+        <img src="Logo.jpeg" alt="Aspire Athletics Club Logo" class="logo">
+        <div>
+            <h1>Aspire Athletics Club</h1>
+            <p class="slogan">Dream Big. Train Hard. Aspire Higher.</p>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="Programs.html">Programs</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="logout.php">Log Out</a></li>
+            <li><a href="Dashboard_page.php" class="active">Dashboard</a></li>
+        </ul>
+    </nav>
+</header>
+ 
+<section class="dashboard">
+    <h2>Welcome back, <?= $name ?>!</h2>
+    <p>Signed in as <strong><?= $email ?></strong></p>
+    <div class="dashboard-links">
+        <a href="Programs.html" class="cta-button">View Programs</a>
+        <a href="events.html" class="cta-button">Upcoming Events</a>
+        <a href="Athlete_registration_form.html" class="cta-button">Register as Athlete</a>
+    </div>
+</section>
+ 
+<footer>
+    <p>&copy; 2026 Aspire Athletics Club | All Rights Reserved</p>
+</footer>
+ 
+</body>
+</html>

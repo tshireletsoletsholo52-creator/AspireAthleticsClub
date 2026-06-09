@@ -1,0 +1,182 @@
+</head>
+<body>
+ 
+<header>
+    <div class="logo-container">
+        <img src="Logo.jpeg" alt="Aspire Athletics Club Logo" class="logo">
+        <div>
+            <h1>Aspire Athletics Club</h1>
+            <p class="slogan">Dream Big. Train Hard. Aspire Higher.</p>
+               <link rel="stylesheet" href="styles.css">
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="Programs.html">Programs</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html" class="active">Sign Up</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+</header>
+ 
+<div class="signup-wrapper">
+ 
+    <!-- Left: perks panel -->
+    <div class="signup-perks">
+        <h3>Join the Club</h3>
+        <p class="sub">Create your free account and unlock everything Aspire Athletics has to offer.</p>
+ 
+        <div class="perk-item">
+            <div class="perk-icon">🏃</div>
+            <div class="perk-text">
+                <h4>Access All Programs</h4>
+                <p>Browse and register for Track & Field, Youth Development, Strength & Conditioning, and more.</p>
+            </div>
+        </div>
+ 
+        <div class="perk-item">
+            <div class="perk-icon">📅</div>
+            <div class="perk-text">
+                <h4>Event Registration</h4>
+                <p>Sign up for competitions, workshops, and community events directly from your dashboard.</p>
+            </div>
+        </div>
+ 
+        <div class="perk-item">
+            <div class="perk-icon">📊</div>
+            <div class="perk-text">
+                <h4>Track Your Progress</h4>
+                <p>Monitor your training history, goals, and performance in one place.</p>
+            </div>
+        </div>
+ 
+        <div class="perk-item">
+            <div class="perk-icon">🤝</div>
+            <div class="perk-text">
+                <h4>Community Support</h4>
+                <p>Connect with coaches and fellow athletes who are committed to helping you grow.</p>
+            </div>
+        </div>
+ 
+        <hr class="perks-divider">
+        <p class="perks-tagline">"Strive. Sweat. Succeed." — Join hundreds of athletes already training with us.</p>
+    </div>
+ 
+    <!-- Right: form card -->
+    <div class="signup-card">
+        <h2>Create Account</h2>
+        <p class="form-sub">Free to join. Takes less than a minute.</p>
+ 
+     <form action="signup.php" method="POST"></form>
+ 
+            <div style="display: flex; gap: 14px;">
+                <div style="flex: 1;">
+                    <label for="first_name">First Name</label>
+                    <div class="input-group">
+                        <input type="text" id="first_name" name="first_name" placeholder="Jane" required>
+                    </div>
+                </div>
+                <div style="flex: 1;">
+                    <label for="last_name">Last Name</label>
+                    <div class="input-group">
+                        <input type="text" id="last_name" name="last_name" placeholder="Smith" required>
+                    </div>
+                </div>
+            </div>
+ 
+            <label for="email">Email Address</label>
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+ 
+            <label for="password">Password</label>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Create a strong password" required oninput="checkStrength(this.value)">
+                <button type="button" class="toggle-pw" onclick="togglePassword('password', this)" title="Show/hide password">👁</button>
+            </div>
+            <div class="strength-bar">
+                <span id="s1"></span>
+                <span id="s2"></span>
+                <span id="s3"></span>
+                <span id="s4"></span>
+            </div>
+            <p class="strength-label" id="strength-label"></p>
+ 
+            <label for="confirm_password">Confirm Password</label>
+            <div class="input-group">
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat your password" required oninput="checkMatch()">
+                <button type="button" class="toggle-pw" onclick="togglePassword('confirm_password', this)" title="Show/hide password">👁</button>
+            </div>
+            <p class="strength-label" id="match-label"></p>
+ 
+            <div class="terms-row">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="contact.html">Terms of Use</a> and confirm I am aged 13 or above (or have parental consent).</label>
+            </div>
+ 
+            <button type="submit" class="cta-button">Create My Account →</button>
+        </form>
+ 
+        <div class="signin-prompt">
+            <p>Already have an account?</p>
+            <a href="login.html" class="signin-link">Sign In →</a>
+        </div>
+    </div>
+ 
+</div>
+ 
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Aspire Athletics Club | All Rights Reserved</p>
+</footer>
+
+ 
+<script>
+function togglePassword(id, btn) {
+    const input = document.getElementById(id);
+    const show = input.type === 'password';
+    input.type = show ? 'text' : 'password';
+    btn.textContent = show ? '🙈' : '👁';
+}
+ 
+function checkStrength(val) {
+    const bars = [document.getElementById('s1'), document.getElementById('s2'), document.getElementById('s3'), document.getElementById('s4')];
+    const label = document.getElementById('strength-label');
+    const colors = ['#e24b4a', '#ef9f27', '#1d9e75', '#0f6e56'];
+    const labels = ['Weak', 'Fair', 'Good', 'Strong'];
+ 
+    let score = 0;
+    if (val.length >= 8) score++;
+    if (/[A-Z]/.test(val)) score++;
+    if (/[0-9]/.test(val)) score++;
+    if (/[^A-Za-z0-9]/.test(val)) score++;
+ 
+    bars.forEach((b, i) => {
+        b.style.background = i < score ? colors[Math.min(score - 1, 3)] : '#e0e5ef';
+    });
+ 
+    label.textContent = val.length > 0 ? labels[Math.min(score - 1, 3)] || 'Too short' : '';
+    label.style.color = score > 0 ? colors[Math.min(score - 1, 3)] : '#888';
+}
+ 
+function checkMatch() {
+    const pw = document.getElementById('password').value;
+    const cpw = document.getElementById('confirm_password').value;
+    const label = document.getElementById('match-label');
+    if (cpw.length === 0) { label.textContent = ''; return; }
+    if (pw === cpw) {
+        label.textContent = '✓ Passwords match';
+        label.style.color = '#1d9e75';
+    } else {
+        label.textContent = '✗ Passwords do not match';
+        label.style.color = '#e24b4a';
+    }
+}
+</script>
+</body>
+</html>

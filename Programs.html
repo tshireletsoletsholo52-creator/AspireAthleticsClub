@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs | Aspire Athletics Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head> 
+<body>
+      <!-- Header with Logo and Navigation -->
+
+ <header>
+    <div class="logo-container">
+        <h1 class="site-title ">Aspire Athletics Club</h1>
+          <img src="Logo.jpeg" alt="Aspire Athletics Club Logo" class="logo" style="max-width: 100px; height: auto;">
+        <p class="slogan">Dream Big. Train Hard. Aspire Higher. Join the Aspire Atletics Club!</p>
+    </div>
+<nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                 <li><a href="login.html">Login</a></li>
+                 <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+</header>
+  
+<!-- Hero -->
+<section class="hero programs-hero">
+    <h2>Our Programs</h2>
+    <p>Training designed for every athlete, every goal.</p>
+    <a href="contact.html" class="cta-button">Register Today</a>
+</section>
+ 
+<!-- Filter bar -->
+<div class="filter-bar">
+    <p>Filter by group</p>
+    <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterPrograms('all', this)">All Programs</button>
+        <button class="filter-btn" onclick="filterPrograms('junior', this)">Juniors</button>
+        <button class="filter-btn" onclick="filterPrograms('senior', this)">Seniors</button>
+        <button class="filter-btn" onclick="filterPrograms('all-ages', this)">All Ages</button>
+    </div>
+</div>
+ 
+<!-- Program Cards -->
+<section class="programs">
+    <h3>Training Options</h3>
+    <div class="program-list">
+ 
+        <article class="program" data-group="junior senior">
+            <div class="program-header">
+                <span class="icon">🏃</span>
+                <span class="program-badge">Most Popular</span>
+                <h4>Track &amp; Field</h4>
+            </div>
+            <div class="program-body">
+                <p>Specialised coaching for sprinters, long-distance runners, and field event athletes. Focused on technique, endurance, and competitive performance.</p>
+                <div class="program-meta">
+                    <span><span class="label">Ages:</span> 10 and above</span>
+                    <span><span class="label">Level:</span> Beginner to Advanced</span>
+                    <span><span class="label">Sessions:</span> Tue, Thu &amp; Sat mornings</span>
+                </div>
+            </div>
+            <div class="program-footer">
+                <a href="Athlete_registration_form.html" class="cta-button">Register</a>
+            </div>
+        </article>
+ 
+        <article class="program" data-group="junior">
+            <div class="program-header">
+                <span class="icon">⚽</span>
+                <span class="program-badge">Juniors</span>
+                <h4>Youth Development</h4>
+            </div>
+            <div class="program-body">
+                <p>Programs tailored for young athletes, emphasising fun, fitness, and skill-building. Perfect for beginners and growing champions who want a strong foundation.</p>
+                <div class="program-meta">
+                    <span><span class="label">Ages:</span> 6 – 15 years</span>
+                    <span><span class="label">Level:</span> Beginner friendly</span>
+                    <span><span class="label">Sessions:</span> Sat &amp; Sun mornings</span>
+                </div>
+            </div>
+            <div class="program-footer">
+                <a href="Athlete_registration_form.html" class="cta-button">Register</a>
+            </div>
+        </article>
+ 
+        <article class="program" data-group="senior">
+            <div class="program-header">
+                <span class="icon">💪</span>
+                <span class="program-badge">Seniors</span>
+                <h4>Strength &amp; Conditioning</h4>
+            </div>
+            <div class="program-body">
+                <p>Comprehensive training to improve power, agility, and resilience. Ideal for athletes preparing for competition or working toward personal fitness goals.</p>
+                <div class="program-meta">
+                    <span><span class="label">Ages:</span> 16 and above</span>
+                    <span><span class="label">Level:</span> Intermediate to Advanced</span>
+                    <span><span class="label">Sessions:</span> Mon, Wed &amp; Fri evenings</span>
+                </div>
+            </div>
+            <div class="program-footer">
+                <a href="Athlete_registration_form.html" class="cta-button">Register</a>
+            </div>
+        </article>
+ 
+        <article class="program" data-group="all-ages">
+            <div class="program-header">
+                <span class="icon">🧘</span>
+                <span class="program-badge">All Ages</span>
+                <h4>Wellness &amp; Recovery</h4>
+            </div>
+            <div class="program-body">
+                <p>Yoga, stretching, and recovery sessions designed to prevent injury and promote long-term health and balance. A vital complement to any training programme.</p>
+                <div class="program-meta">
+                    <span><span class="label">Ages:</span> Open to all</span>
+                    <span><span class="label">Level:</span> All levels welcome</span>
+                    <span><span class="label">Sessions:</span> Wed mornings &amp; Sun afternoons</span>
+                </div>
+            </div>
+            <div class="program-footer">
+                <a href="Athlete_registration_form.html" class="cta-button">Register</a>
+            </div>
+        </article>
+ 
+    </div>
+</section>
+ 
+<!-- How it works -->
+<section class="how-it-works">
+    <h3>How to Get Started</h3>
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h4>Choose a Program</h4>
+            <p>Browse the options above and pick the program that matches your age and goals.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <h4>Register Online</h4>
+            <p>Fill in the athlete registration form — takes less than 5 minutes.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <h4>Attend a Trial</h4>
+            <p>Come to your first session, meet the coaches, and see if it's the right fit.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">4</div>
+            <h4>Start Training</h4>
+            <p>Commit to the programme and begin your journey toward peak performance.</p>
+        </div>
+    </div>
+</section>
+ 
+<!-- Pricing teaser -->
+<section class="pricing-teaser">
+    <h3>Competitive Rates for Every Family</h3>
+    <p>We offer affordable membership options for individuals and families. Contact us directly for a personalised quote based on your chosen programme.</p>
+    <a href="contact.html" class="cta-button">Get Pricing Info</a>
+</section>
+ 
+<!-- FAQ -->
+<section style="padding: 52px 40px; background: #f5f5f5;">
+    <h3 style="text-align:center; margin-bottom: 28px;">Frequently Asked Questions</h3>
+    <div class="faq">
+ 
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Do I need prior experience to join?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Not at all. Most of our programmes welcome complete beginners. Our coaches will assess your current level at the first session and tailor training accordingly.
+            </div>
+        </div>
+ 
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                What should I bring to my first session?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Comfortable athletic wear, appropriate footwear for your sport (trainers or spikes), a water bottle, and a completed registration form. Printed forms are available on the Contact page.
+            </div>
+        </div>
+ 
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Can my child join if they are very young?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Yes — our Youth Development programme accepts children from age 6. Parents or guardians are welcome to stay and watch sessions, especially during the first few weeks.
+            </div>
+        </div>
+ 
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Can I join more than one programme?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Absolutely. Many of our athletes combine Track &amp; Field with Strength &amp; Conditioning, or add a Wellness &amp; Recovery session to their weekly schedule. Contact us to discuss the best combination for your goals.
+            </div>
+        </div>
+ 
+    </div>
+</section>
+ 
+<!-- CTA -->
+<section class="cta">
+    <h3>Ready to Take the First Step?</h3>
+    <a href="Athlete_registration_form.html" class="cta-button">Register Now</a>
+</section>
+ 
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Aspire Athletics Club | All Rights Reserved</p>
+</footer>
+
+<script>
+function filterPrograms(group, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.program').forEach(card => {
+        const groups = card.dataset.group || '';
+        card.style.display = (group === 'all' || groups.includes(group)) ? '' : 'none';
+    });
+}
+ 
+function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(b => b.classList.remove('open'));
+    if (!isOpen) {
+        answer.classList.add('open');
+        btn.classList.add('open');
+    }
+}
+</script>
+ 
+</body>
+</html>
+ 
